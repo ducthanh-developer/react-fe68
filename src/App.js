@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import DemoReactLifeCircles from "./lesson-5-6-7/react-life-circles/DemoReactLifeCircles";
+import DemoHandleForm from "./lesson-5-6-7/handle-form/DemoHandleForm";
 // import GamXucXac from "./lesson-5-6-7/game-xuc-xac-redux/GameXucXac";
 // import ClassBasedComponent from "./react-lesson-1/demo-component/ClassBasedComponent";
 // import FunctionaComponent from "./react-lesson-1/demo-component/FunctionalComponent";
@@ -70,7 +71,10 @@ const App = () => {
       {/* <GamXucXac /> */}
 
       {/* Demo React Life Circle */}
-      <DemoReactLifeCircles />
+      {/* <DemoReactLifeCircles /> */}
+
+      {/* Demo handle form */}
+      <DemoHandleForm />
     </div>
   );
 };

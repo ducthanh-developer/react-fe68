@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 
 export default class Counter extends Component {
   //   Mounting
@@ -22,6 +22,12 @@ export default class Counter extends Component {
     });
   };
 
+  interval = null;
+  // Updating
+  // shouldComponentUpdate(nextProps, nextState){
+  //   return nextProps === this.props;
+  // }
+
   //   Mounting và Updating
   render() {
     console.log("Counter render");
@@ -41,17 +47,20 @@ export default class Counter extends Component {
 
   //   Mounting
   componentDidMount() {
+    this.interval = setInterval(() => {
+      console.log('Counter componentDidMount');
+    }, 1000)
     //   Dùng để call api
-    console.log("Counter componentDidMount");
   }
 
   //   Updating
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     console.log("Counter componentDidUpdate");
   }
 
   // UnMounting
   componentWillUnmount() {
+    clearInterval(this.interval);
     console.log("Counter componentWillUnmount");
   }
 }

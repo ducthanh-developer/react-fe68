@@ -39,19 +39,18 @@ export default class DemoHandleForm extends Component {
     }
 
     // check valid form
-    if (emailErr) {
+
+    if (passwordErr || emailErr) {
       this.setState({
         emailErr,
-      });
-      return false;
-    }
-
-    if (passwordErr) {
-      this.setState({
         passwordErr,
       });
       return false;
     }
+    this.setState({
+      emailErr,
+      passwordErr,
+    });
     return true;
   };
 
